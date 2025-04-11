@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #023047;
+}
+.card{
+    width: 60vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 2.3rem;
+    background-color: #8ecae6;
+    border-radius: 4px;
+}
+
+.card > h1{
+    font-size: 2.3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.height-card ,.weight-card{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+}
+
+#height,#weight{
+    width: 13rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px        ;
+}
+#height:focus,#weight:focus{
+    outline: 2px solid #023047;
+}
+#submit{
+    border: none;
+    width: 7rem;
+    height: 1.8rem;
+    background-color: #219ebc;
+    border-radius: 3%;
+    cursor: pointer;
+    font-weight: bold;
+}
+#submit:hover{
+    background-color: #26a3c2;
+}
+
+@media (max-width:600px) {
+    .card{
+        width: 87vw;
+    }
+    .card > h1{
+        font-size: 1.6rem;
+    }
+}
+
+.hide{
+    display: none;
+}
