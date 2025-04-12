@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI CALCULATOR</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10476/10476452.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,16 +13,23 @@
     <main>
         <div class="card">
             <h1>BMI CALCULATOR</h1>
-            <form>
+            <form class="form-card">
                 <div class="height-card">
                     <p>Enter Your Height (In cm)</p>
-                    <input type="" min="30" id="height">
+                    <input type="number" min="30" id="height">
                 </div>
                 <div class="weight-card">
                     <p>Enter Your Weight (In kgs)</p>
-                    <input type="" min="2" id="weight">
+                    <input type="number" min="2" id="weight">
                 </div>
+                <p class="warning hide">please enter all data</p>
             </form>
+            <div class="result-card hide">
+                <div id="result-card">
+                    <h2>Your BMI is <span id="BMI">22.23</span></h2>
+                    <p>You are <span id="category">underweight</span></p>
+                </div>
+            </div>
             <button id="submit">Calculate</button>
         </div>
     </main>
