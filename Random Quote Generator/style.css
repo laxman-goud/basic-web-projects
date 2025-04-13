@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003049;
+}
+.card{
+    width: 85vw;
+    height: 80vh;
+    background-color: #669bbc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+    gap: 1.3rem;
+    padding: .8rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.quote-card{
+    color: #14213d;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.author{
+    font-size: 1.5rem;
+}
+.generateBtn{
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5%;
+    background-color: #023e8a;
+    color: white;
+    cursor: pointer;
+    transition: background .5s ease-in;
+}
+.generateBtn:hover{
+    background-color: #1050a5;
+}
+
+@media (min-width:600px) {
+    .quote{
+        font-size: 2.18rem;
+    }
+    .card{
+        width: 75vw;
+        height: 69vh;
+    }
+    .generateBtn{
+        height: 2.5rem;
+        width: 9rem;
+        font-size: 1.1rem;
+    }
+    .author{
+        font-size: 2rem;
+    }
+}
