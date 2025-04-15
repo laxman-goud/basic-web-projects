@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #141933;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form{
+    background-color: #fefefe;
+    width: 480px;
+    height: auto;
+    padding: 3.1rem 0 1.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.name-line,.number-line,.email-line,.message-line{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+#email-id,#phone-no,#full-name{
+    width:50%;
+    padding: .3rem;
+    background-color: #ffffff00;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: auto;
+}
+#message{
+    background-color: #ffffff00;
+    width: 48%;
+    height: 5rem;
+    padding: .3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-left: auto;
+}
+.submit{
+    width: 7.2rem;
+    height: 2.1rem;
+    background-color: #000000;
+    color: #fefefe;
+    border: none;
+    border-radius: 3px;
+}
+.logo{
+    color: white;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -6%;
+    font-size: 1.5rem;
+}
+
+@media (max-width:510px) {
+    form{
+        width: 354px;
+    }
+}
