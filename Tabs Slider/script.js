@@ -1,14 +1,20 @@
-const tab1 = document.getElementById('tab1');
-const tab2 = document.getElementById('tab2');
-const tab3 = document.getElementById('tab3');
+const tabs = document.querySelectorAll('.Tab');
+const contents = document.querySelectorAll('.content');
 
-const tabs = document.querySelector('.tabs');
-let preTab = tab1;
+const Tab = document.querySelector('.tabs');
+
+let preTab = tabs[0];
+let preContent = contents[0];
 
 const selectTab = (e)=>{
-    preTab.classList.remove('active');
-    e.target.classList.add('active');
+    preTab.classList.remove('active-bar');
+    e.target.classList.add('active-bar');    
+
+    const index = Array.from(tabs).indexOf(e.target);
+    preContent.classList.remove('active-tab');
+    preContent = contents[index];
+    preContent.classList.add('active-tab');
     preTab = e.target;
-    
 }
-tabs.addEventListener('click',selectTab);
+
+Tab.addEventListener('click',selectTab);

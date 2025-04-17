@@ -24,6 +24,7 @@ main {
 
 .card-main {
     width: 71vh;
+    min-height: 300px;
     background-color: #fff;
     border-radius: .5rem;
 }
@@ -55,10 +56,11 @@ main {
     display: none;
 }
 .active-tab{
-    display: inline;
+    display: flex;
+    flex-direction: column;
 }
 
-.active{
+.active-bar{
     border-bottom: 2px solid blue;
     width: 35%;
     transition: width 1s ease;
