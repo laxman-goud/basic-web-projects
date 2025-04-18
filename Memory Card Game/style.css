@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,17 +10,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: hsla(284, 80%, 10%, 1);
-
     background: linear-gradient(90deg, hsla(284, 80%, 10%, 1) 0%, hsla(290, 25%, 76%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(284, 80%, 10%, 1) 0%, hsla(290, 25%, 76%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(284, 80%, 10%, 1) 0%, hsla(290, 25%, 76%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#22052D", endColorstr="#CCB3D1", GradientType=1);
+    font-family: sans-serif;
 }
 
-.game-board{
+.game-board {
     background-color: #dda15e;
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* Adjust columns as needed */
+    grid-gap: 15px; /* Spacing between cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background-color: #fefae0;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card i {
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back face */
+}
+
+.card i:first-child {
+    /* Question mark (front) */
+    color: #6b705c;
+    transform: rotateY(0deg);
+}
+
+.card i:last-child {
+    /* Icon (back) */
+    color: #bc6c25;
+    transform: rotateY(180deg);
+}
+
+.card.matched i:first-child,
+.card.matched i:last-child {
+    opacity: 0.5; /* Slightly fade out matched cards */
 }
