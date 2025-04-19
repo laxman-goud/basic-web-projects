@@ -17,8 +17,8 @@ body {
 .game-board {
     background-color: #dda15e;
     display: grid;
-    grid-template-columns: repeat(4, 100px); /* Adjust columns as needed */
-    grid-gap: 15px; /* Spacing between cards */
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -35,33 +35,11 @@ body {
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
 }
 
 .card.flipped {
+    background-color: #ffffff;
     transform: rotateY(180deg);
-}
-
-.card i {
-    position: absolute;
-    backface-visibility: hidden; /* Hide the back face */
-}
-
-.card i:first-child {
-    /* Question mark (front) */
-    color: #6b705c;
-    transform: rotateY(0deg);
-}
-
-.card i:last-child {
-    /* Icon (back) */
-    color: #bc6c25;
-    transform: rotateY(180deg);
-}
-
-.card.matched i:first-child,
-.card.matched i:last-child {
-    opacity: 0.5; /* Slightly fade out matched cards */
 }
