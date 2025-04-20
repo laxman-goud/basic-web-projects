@@ -10,10 +10,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, hsla(284, 80%, 10%, 1) 0%, hsla(290, 25%, 76%, 1) 100%);
+    background: hsla(208, 33%, 21%, 1);
+
+background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243748", endColorstr="#4B749F", GradientType=1 );
     font-family: sans-serif;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
 .game-board {
     background-color: #dda15e;
     display: grid;
@@ -42,4 +55,23 @@ body {
 .card.flipped {
     background-color: #ffffff;
     transform: rotateY(180deg);
+}
+.restart{
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4%;
+}
+.win{
+    color: #ddff00;
+}
+.hide{
+    display: none;
+}
+@media (max-width:500px) {
+    .game-board{
+        grid-template-columns: repeat(2,100px);
+    }
 }

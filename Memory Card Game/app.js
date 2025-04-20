@@ -11,11 +11,14 @@ let cards = [
 
 const gameBoard = document.querySelector('.game-board');
 const cardsEl = document.querySelectorAll('.card');
+const restart = document.querySelector('.restart');
+const win = document.querySelector('.win');
 let allCards = Array.from(cardsEl);
 
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
+let count = 0;
 
 const RandomizeCards = () => {
     let tempCards = [...cards];
@@ -60,7 +63,11 @@ const showCard = (e) => {
         if (isMatch) {
             firstCard.classList.add('matched');
             secondCard.classList.add('matched');
+            count++;
             resetTurn();
+            if(count == 4){
+                win.classList.remove('hide');
+            }
         } else {
             setTimeout(() => {
                 firstCard.innerHTML = `<i class="fa-solid fa-question"></i>`;
@@ -73,5 +80,12 @@ const showCard = (e) => {
     }
 };
 
+const restartGame = ()=>{
+    count = 0;
+    win.classList.add('hide');
+    RandomizeCards();
+}
+
 gameBoard.addEventListener('click', showCard);
+restart.addEventListener('click',restartGame);
 RandomizeCards();
