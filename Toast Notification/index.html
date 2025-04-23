@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,38 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
     <main>
-        <button class="success">Success</button>
-        <button class="error">Invalid</button>
-        <button class="error">Error</button>
+        <div class="buttons">
+            <button class="success">Success</button>
+            <button class="invalid">Invalid</button>
+            <button class="error">Error</button>
+        </div>
+
+        <!-- 🔥 Warning Card -->
         <div class="card warning-card hide">
             <i class="fa-solid fa-circle-exclamation"></i>
             <p>Invalid input, check again</p>
             <div class="bar"></div>
         </div>
-        <div class="card success-card">
+
+        <!-- 🔥 Success Card -->
+        <div class="card success-card hide">
             <i class="fa-solid fa-circle-check"></i>
-            <p>Invalid input, check again</p>
+            <p>Data Submitted Successfully!</p>
             <div class="bar"></div>
         </div>
-        <div class="card wrong-card hide">
+
+        <!-- 🔥 Error Card -->
+        <div class="card invalid-card hide">
             <i class="fa-solid fa-circle-xmark"></i>
-            <p>Invalid input, check again</p>
+            <p>Enter Correct Details</p>
             <div class="bar"></div>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
