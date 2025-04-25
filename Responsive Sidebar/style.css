@@ -11,6 +11,10 @@ body{
 }
 main{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.3rem;
 }
 .icon{
     font-size: 23px;
@@ -18,7 +22,7 @@ main{
 }
 /* 🔥header styles */
 .header{
-    width: 90%;
+    width: 100%;
     height: 2.5rem;
     background-color: #fff;
 }
@@ -54,7 +58,8 @@ main{
 /* 🔥navbar styles */
 .navbar{
     width: 10%;
-    background-color: #f59a9a;
+    background-color: #023047d7;
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -83,7 +88,10 @@ main{
     gap: 1rem;
     cursor: pointer;
 }
-
+.dashboard:hover,.apps:hover,.layouts:hover,.stats:hover,.auth:hover,.settings:hover,.users:hover,.notifications:hover{
+    transition: all .5s ease;
+    color: #219ebc;
+}
 .settings-menu{
     display: flex;
     flex-direction: column;
@@ -97,4 +105,8 @@ main{
     margin-top: auto;
     display: flex;
     gap: 1rem;
+}
+
+.hide{
+    display: none;
 }
