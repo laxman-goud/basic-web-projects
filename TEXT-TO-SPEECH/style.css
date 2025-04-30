@@ -1,34 +1,59 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-main{
+
+main {
     height: 100vh;
     width: 100vw;
-    background-color: #ce9696;
+    background: hsla(270, 94%, 25%, 1);
+
+    background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#42047E", endColorstr="#07F49E", GradientType=1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family:monospace;
+    font-family: monospace;
     gap: 1rem;
 }
-
-#text{
+main>h1{
+    color: #edf2f4;
+    font-size: 50px;
+}
+#text {
     width: 560px;
     height: 300px;
     outline: none;
     border: none;
     padding: .7rem;
     font-size: 1.1rem;
-    border-radius: 3%;
+    border-radius: 10px;
+    background-color: #caf0f8;
 }
-
-.speech-card>select{
+.speech-card>select {
     width: 400px;
     height: 2.6rem;
     outline: none;
     border: none;
     padding: .5rem;
     border-radius: 50px;
+    background-color: #caf0f8;
+}
+.speech-card>button{
+    height: 3rem;
+    width: 10rem;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: #00b4d8;
+    font-size: 18px;
+}
+.speech-card>button>i{
+    margin: 0 18px 0 0;
 }
