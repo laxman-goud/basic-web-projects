@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    height: 720px;
+    width: 480px;
+    background-image: linear-gradient(135deg, #D387AB 10%, #E899DC 100%);
+}
+
+.top{
+    display: flex;
+    margin: 18px 10px 0 50px;
+    width: 100%;
+}
+.top i{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f22fd5 ;
+}
+.top i:nth-child(2) {
+    margin: 0 100px 0 auto;
+}
