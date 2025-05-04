@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: #e0e0e0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.outer {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        6px 6px 10px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner span {
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 1;
+}
+
+.progress {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(33, 147, 235, 1) 38%, rgba(83, 237, 188, 1) 82%);
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    box-shadow:
+        inset 4px 4px 6px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0px 12px 10px rgba(0, 0, 0, 0.05);
+}
