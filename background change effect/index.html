@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Background Change Effect</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <img src="images/transparent.png" alt="transparent image" class="img-box">
-        <img src="images/original.jpg" alt="original image" class="wrap-img">
+        <div class="img-box">
+            <img src="images/transparent.png" alt="Transparent Image" width="100%" />
+            <div class="img-wrap">
+                <img src="images/original.jpg" id="originalImg" alt="Original Image" />
+            </div>
+            <span class="line">
+                <img src="images/arrow.png" class="arrow" />
+            </span>
+        </div>
     </div>
+
+
+    <script>
+        const imgBox = document.querySelector('.img-box');
+        const imgWrap = document.querySelector('.img-wrap');
+        const line = document.querySelector('.line');
+
+        imgBox.addEventListener('mousemove', function (e) {
+            const rect = imgBox.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+
+            imgWrap.style.width = x + 'px';
+            line.style.left = x + 'px';
+        });
+
+        imgBox.addEventListener('mouseleave', () => {
+            imgWrap.style.width = '100%';
+            line.style.left = '100%';
+        });
+    </script>
 </body>
+
 </html>
