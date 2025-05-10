@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
     <div class="app">
         <header>
@@ -17,19 +19,22 @@
         </header>
         <main>
             <div class="center">
-                <img src="" class="weather-image">
-                <h1 class="temperature"></h1>
-                <h2 class="location"></h2>
+                <img src="images/clear.png" alt="weather-image" id="weather-image">
+                <h1 id="temperature">34&deg;C</h1>
+                <h2 id="location">Bangalore</h2>
             </div>
             <div class="bottom">
-                <div class="humidity">
-
+                <div class="humidity-cont">
+                    <img src="images/humidity.png" alt="humidity">
+                    <h3 id="humidity">48% <br> humidity</h3>
                 </div>
-                <div class="wind-speed">
-                    
+                <div class="wind-speed-cont">
+                    <img src="images/wind.png" alt="wind-speed">
+                    <h3 id="wind-speed"> 10.29 km/h <br> Wind Speed </h3>
                 </div>
             </div>
         </main>
     </div>
 </body>
+
 </html>
