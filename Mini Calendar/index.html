@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Calendar</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <div class="day-week">
-            <h2 id="day">10</h2>
-            <h2 id="week">Saturday</h2>
+            <h2 id="day"></h2>
+            <h2 id="week"></h2>
         </div>
         <div class="year-month">
-            <h2 id="month">June</h2>
-            <h2 id="year">2025</h2>
+            <h2 id="month"></h2>
+            <h2 id="year"></h2>
         </div>
     </main>
+    <script>
+        const year = document.getElementById('year');
+        const month = document.getElementById('month');
+        const week = document.getElementById('week');
+        const day = document.getElementById('day');
+
+        const today = new Date();
+        
+        allMonths = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ]
+        allWeeks = [
+            "Sunday", "Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday"
+        ]
+
+        year.innerHTML = today.getFullYear();
+        month.innerHTML = allMonths[today.getMonth()];
+        week.innerHTML = allWeeks[today.getDay()];
+        day.innerHTML = (today.getDate()<10 ? '0' : '') + today.getDate() ;
+    </script>
 </body>
+
 </html>
