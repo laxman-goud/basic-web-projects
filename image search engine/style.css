@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: #38297b;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.search-cont{
+    display: flex;
+    align-items: center;
+}
+#search-input{
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 18rem;
+    padding: 1.4rem;
+    background-color: #725ec8;
+}
+#search-input:placeholder{
+    color: white;
+}
+.search{
+    border: none;
+    height: 2.5rem;
+    padding: 1.4rem;
+    background-color: rgb(255, 123, 0);
+}
