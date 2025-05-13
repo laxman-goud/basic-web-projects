@@ -58,9 +58,12 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    padding: 1rem;
+    overflow-x: hidden;
 }
 #image{
-    width: 360px;
-    height: 210px;
+    min-width: 360px;
+    width: 30%;
+    height: 320px;
     border-radius: 5px;
 }
