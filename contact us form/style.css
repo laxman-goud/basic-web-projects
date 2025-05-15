@@ -17,11 +17,13 @@ body{
 .card{
     background-color: #fff;
     min-height: 75vh;
-    min-width: 80vw;
+    width: 90%;
     box-shadow: 3px 3px 10px rgb(61, 61, 61);
     display: flex;
     align-items: center;
     gap: 1rem;
+    border-radius: 4px;
+    text-align: justify;
 }
 .contact{
     width: 35%;
@@ -66,7 +68,7 @@ form{
     gap: 1.8rem;
 }
 .name,.email{
-    width: 80%;
+    width: clamp(280px,80%,800px);
     height: 50px;
     border: none;
     background-color: #edf1fe;
@@ -75,7 +77,7 @@ form{
     padding-left: 25px;
 }
 .message{
-    width: 80%;
+    width: clamp(280px,80%,800px);
     height: 110px;
     border: none;
     font-size: 1.06rem;
@@ -96,4 +98,29 @@ form{
 .card::selection{
     background-color: #371281;
     color: white;
+}
+
+@media (max-width:940px) {
+    body{
+        padding: 1rem;
+    }
+    .card{
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 3rem;
+    }
+    .line{
+        display: none;
+    }
+    .contact{
+        gap: 1.9rem;
+    }
+    .address,.phone,.mail{
+        gap: .2rem;
+    }
+    .contact{
+        width: 84%;
+        border-top: 1px solid rgb(94, 94, 94);
+        padding: 2rem;
+    }
 }
