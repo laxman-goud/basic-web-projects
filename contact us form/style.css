@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
+
 }
 body{
     min-height: 100vh;
@@ -10,10 +12,60 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .card{
     background-color: #fff;
     min-height: 75vh;
     min-width: 80vw;
-    box-shadow: 4px 4px 20px rgb(61, 61, 61);
+    box-shadow: 3px 3px 10px rgb(61, 61, 61);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+}
+.contact i{
+    color: #371281;
+    font-size: 31px;
+}
+.address,.phone,.mail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+}
+.contact p{
+    color: rgb(68, 68, 68);
+}
+.line{
+    min-height: 510px;
+    width: 2px;
+    background-color: #848484;
+}
+.form{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+form input{
+    width: 80%;
+    height: 40px;
 }
