@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    background-color: var(--color);
 }
 
 .container {
@@ -58,4 +58,29 @@ body {
 
 .bottom>.signup {
     text-decoration: underline;
+}
+
+.colors{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    background-color: white;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+.colors span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--clr);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.colors span.active{
+    border: 2px solid black;
+    transform: scale(1.3);
 }
