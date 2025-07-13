@@ -7,10 +7,12 @@ let toggled = true;
 const toggleBar = ()=>{
     if(toggled){
         sideBar.classList.add('hide');
+        sideBar.classList.remove('active');
         toggled = false;
     }
     else{
         sideBar.classList.remove('hide');
+        sideBar.classList.add('active');
         toggled = true;
     }
 }

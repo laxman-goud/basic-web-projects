@@ -57,7 +57,9 @@ main{
 
 /* 🔥navbar styles */
 .navbar{
-    width: 10%;
+    min-width: 230px;
+    width: 20vw;
+    max-width: 260px;
     background-color: #023047d7;
     color: #fff;
     display: flex;
@@ -109,4 +111,22 @@ main{
 
 .hide{
     display: none;
+}
+
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        display: none;
+        position: relative;
+        width: 0px;
+        left: -100%;
+    }
+    .active{
+        display: block;
+        left: 0%;
+    }
+    main{
+        width: 100vw;
+    }
 }
